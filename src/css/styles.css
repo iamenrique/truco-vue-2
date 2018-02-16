@@ -1,0 +1,9 @@
+[v-cloak] {
+    display: none;
+}
+
+.wt-container {
+    max-width: 800px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
