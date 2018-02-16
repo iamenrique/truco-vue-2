@@ -7,3 +7,64 @@
     border: 1px solid #ddd;
     padding: 10px;
 }
+
+.wt-comment-editor {
+    text-align: center;
+}
+
+.wt-comment-editor__input {
+    display: inline-block;
+    resize: none;
+    width: 200px;
+    height: 80px;
+}
+
+.wt-comment-editor__button {
+    background-color: darkcyan;
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: width ease-out 0.2s, height ease-out 0.2s, background-color ease-out 0.2s;
+}
+
+.wt-comment-editor__button:hover {
+    width: 84px;
+    height: 84px;
+    background-color: #006b6b;
+}
+
+.wt-comment-list {
+    padding: 0 30px;
+}
+
+.wt-comment {
+    border: 1px solid darkcyan;
+    border-radius: 0 50px 50px;
+    margin: 10px 0;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color ease-out 0.4s;
+}
+
+.wt-comment:nth-child(even) {
+    border-radius: 50px 0 50px 50px;
+}
+
+.wt-comment:hover {
+    background-color: #eee;
+}
+
+.wt-comment__subject {
+    font-weight: bold;
+}
+
+.wt-comment__body {
+    font-style: italic;
+}

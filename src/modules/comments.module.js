@@ -37,7 +37,7 @@
             data: function () {
                 return {}
             },
-            template: '<div class="wt-comment-editor"><textarea class="wt-comment-editor__input"></textarea><button class="wt-comment-editor__button" type="button">Enviar</button></div>'
+            template: '<div class="wt-comment-editor"><textarea class="wt-comment-editor__input" placeholder="Escribe algo..."></textarea><button class="wt-comment-editor__button" type="button">Enviar</button></div>'
         }
     }
 
