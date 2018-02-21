@@ -2,23 +2,44 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>TestApp - Truco de Vue.js #2</title>
+    <title>Truco de Vue.js #2</title>
 
+    <!-- Our styles -->
     <link rel="stylesheet" href="src/css/styles.css" type="text/css">
+
+    <!-- Google Font: Asap Condensed -->
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet">
 </head>
 <body>
-<h1>TestApp</h1>
-<h2>Truco de Vue.js #2</h2>
-<p>Lo que aquí estoy haciendo es crear un widget con Vue.js que no afecta
-    nada de tu app, vive en este contexto y no molesta a nadie. No tienes que
-    preocuparte porque la existencia de este componente interfiera con el resto
-    la app.</p>
+
+<header class="wt-header">
+    <img class="wt-logo" src="assets/wt-white.png">
+</header>
+
+<section class="wt-description">
+    <h1 class="wt-description__title">Truco de Vue.js #2</h1>
+    <p>Lo que aquí estoy haciendo es crear un widget con Vue.js que no afecta
+        nada de tu app, vive en este contexto y no molesta a nadie. No tienes que
+        preocuparte porque la existencia de este componente interfiera con el resto
+        la app.</p>
+
+</section>
 
 <div class="wt-container">
     <div id="vue-comments-widget" v-cloak></div>
 </div>
 
+<footer class="wt-footer">
+    <img class="wt-logo" src="assets/wt-white.png">
+    <span>Creado por Enrique Díaz R.</span>
+</footer>
+
+<!-- Importar el script de Vue.js de donde puedas. -->
 <script src="external/vue.min.js" type="application/javascript"></script>
+
+<!-- Este script usa Vue.js e insertará su magia en el div de arriba. -->
 <script src="/src/modules/comments.module.js" type="text/javascript"></script>
+
+
 </body>
 </html>

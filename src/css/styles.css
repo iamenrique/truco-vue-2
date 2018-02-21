@@ -2,10 +2,48 @@
     display: none;
 }
 
+body {
+    margin: 0;
+    background-color: #29b8f0;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+.wt-header,
+.wt-footer {
+    height: 65px;
+    background-color: #002e51;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+}
+
+.wt-logo {
+    display: inline-block;
+    height: 45px;
+    margin-right: 30px;
+}
+
+.wt-description {
+    text-align: center;
+    color: #002e51;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.wt-description .wt-description__title {
+    letter-spacing: 4px;
+    font-size: 72px;
+    font-weight: 700;
+    color: #fff;
+}
+
 .wt-container {
     max-width: 800px;
-    border: 1px solid #ddd;
     padding: 10px;
+    background-color: #fff;
+    border-top: 5px solid #002e51;
+    margin: 15px;
 }
 
 .wt-comment-editor {
