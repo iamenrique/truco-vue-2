@@ -1,5 +1,23 @@
 (function (Vue) {
 
+    /**
+     *  Descriptores:
+     *      Las siguientes 3 funciones sirven para devolver objetos con la estructura que un componente de Vue
+     *      requiere.
+     *
+     *      ¿Por qué usar este tipo de funciones y no escribir el objeto inline?
+     *          En mi humilde opinión, englobar dichos objetos de esta manera ayuda a tener un código más limpio
+     *          y estructurado. Si estamos trabajando con una herramienta que promueve el uso de componentes, debemos
+     *          estar consientes de que tener una estructura mantenible y reusable es primordial.
+     *
+     *          Otra ventaja es que si tienes la necesidad de utilizar un componente en otro lado, puedes copiar y
+     *          llevarte la función completa y no se romperá absolutamente nada ya que la función descriptora debe
+     *          ser ajena al contexto donde se define.
+     *
+     *      REGLA DE ORO: ¡DIVIDE (adecuadamente) Y VENCERÁS!
+     *          Un componente es una caja negra. Un componente padre no debe preocuparse por qué sucede en un
+     *          componente hijo, solo debe manejar la comunicación con él.
+     **/
     function getCommentDescriptor() {
         return {
             data: function () {
@@ -42,6 +60,10 @@
     }
 
     function initVueWidget() {
+        // 3. Creamos una instancia de Vue que contendrá el widget completo. En este punto, la única condición es
+        //      que exista un elemento con id "vue-comments-widget" en el DOM. El resto son referencias locales u
+        //      objetos generados dinámicamente, tal es el caso de los componentes hijos usados en el widget.
+
         return new Vue({
             el: '#vue-comments-widget',
             components: {
@@ -92,7 +114,9 @@
         }
     }
 
+    // 1. Esperamos a que el DOM esté listo.
     onDocumentReady(function () {
+        // 2. Una vez listo, creamos nuestro widget con Vue.
         let commentsWidget = initVueWidget()
 
         // Aquí tienes la referencia al widget completo. Puedes hacer con ella lo que gustes.
