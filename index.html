@@ -40,6 +40,32 @@
 <!-- Este script usa Vue.js e insertará su magia en el div de arriba. -->
 <script src="/src/modules/comments.module.js" type="text/javascript"></script>
 
+<script type="text/x-template" id="vue-comment-template">
+    <div class="wt-comment">
+        <p class="wt-comment__subject">{{model.subject}}</p>
+        <p class="wt-comment__body">{{model.body}}</p>
+    </div>
+</script>
+
+<script type="text/x-template" id="vue-comment-list-template">
+    <div class="wt-comment-list">
+        <comment v-for="c of comments" :key="c.id" :model="c"></comment>
+    </div>
+</script>
+
+<script type="text/x-template" id="vue-comment-editor-template">
+    <div class="wt-comment-editor">
+        <textarea class="wt-comment-editor__input" placeholder="Escribe algo..."></textarea>
+        <button class="wt-comment-editor__button" type="button">Enviar</button>
+    </div>
+</script>
+
+<script type="text/x-template" id="vue-comments-widget-template">
+    <section class="wt-comments">
+        <comment-editor></comment-editor>
+        <comment-list :comments="comments"></comment-list>
+    </section>
+</script>
 
 </body>
 </html>

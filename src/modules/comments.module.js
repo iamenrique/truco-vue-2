@@ -24,12 +24,7 @@
                 return {}
             },
             props: ['model'],
-            template: `
-                <div class="wt-comment">
-                    <p class="wt-comment__subject">{{model.subject}}</p>
-                    <p class="wt-comment__body">{{model.body}}</p>
-                </div>
-            `
+            template: '#vue-comment-template'
         }
     }
 
@@ -42,11 +37,7 @@
             components: {
                 'comment': getCommentDescriptor()
             },
-            template: `
-                <div class="wt-comment-list">
-                    <comment v-for="c of comments" :key="c.id" :model="c"></comment>
-                </div>
-            `
+            template: '#vue-comment-list-template'
         }
     }
 
@@ -55,7 +46,7 @@
             data: function () {
                 return {}
             },
-            template: '<div class="wt-comment-editor"><textarea class="wt-comment-editor__input" placeholder="Escribe algo..."></textarea><button class="wt-comment-editor__button" type="button">Enviar</button></div>'
+            template: '#vue-comment-editor-template'
         }
     }
 
@@ -70,12 +61,7 @@
                 'comment-editor': getCommentEditorDescriptor(),
                 'comment-list': getCommentListDescriptor()
             },
-            template: `
-                <section class="wt-comments">
-                    <comment-editor></comment-editor>
-                    <comment-list :comments="comments"></comment-list>
-                </section>
-            `,
+            template: '#vue-comments-widget-template',
             data: {
                 comments: [{
                     id: 0,
